@@ -4,7 +4,7 @@ const Section2 = () => {
     return (
         <Section id="section2">
             <div
-                className="bg-primary my-36 justify-center flex flex-col gap-8 text-xl lg:text-4xl text-center py-8 px-4 lg:p-18 border-t border-gray">
+                className="bg-primary my-9 lg:my-36 justify-center flex flex-col gap-8 text-xl lg:text-4xl text-center py-8 px-4 lg:p-18 border-t border-gray">
                 <div>
                     Laboratoire Gaïana Paris creates high-end skin care products, functional foods and intimate
                     cosmetics for hotels, spas and brands.
