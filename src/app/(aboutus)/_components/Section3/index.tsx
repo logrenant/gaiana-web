@@ -6,7 +6,7 @@ import Marquee from "react-fast-marquee";
 const marquees = ["SÏANNA", "LA FANTAISIE PARIS", "ETRE WELNESS", "GAÏANA", "BLACK SWAN PARIS"];
 
 const TextComponent = ({ text }: { text: string }) => {
-    return <p className="text-3xl text-secondary px-5 border border-gray rounded-lg ml-4 font-semibold tracking-tighter h-[72px] flex justify-center items-center">{text}</p>;
+    return <p className="lg:text-3xl text-xl text-secondary px-5 py-3 border border-gray rounded-lg ml-4 font-semibold tracking-tighter  flex justify-center items-center">{text}</p>;
 };
 
 const Section3 = () => {

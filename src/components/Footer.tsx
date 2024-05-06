@@ -11,18 +11,18 @@ import Link from "next/link";
 
 const Footer = () => {
     return (
-        <div className="bg-secondary text-primary p-18">
-            <div className="flex justify-between py-8 items-center">
-                <div className="text-5xl font-medium">
+        <div className="bg-secondary text-primary px-4 py-8 lg:p-18">
+            <div className="flex flex-col gap-8 lg:gap-0 lg:flex-row lg:justify-between py-8 items-center">
+                <div className="text-3xl lg:text-5xl font-medium">
                     Laboratoire Gaïana Paris
                 </div>
-                <div className="flex justify-end">
+                <div className="flex w-full justify-between lg:justify-end">
                     <LinkBox Icon={SiInstagram} href="https://www.instagram.com/gaianaparis/" />
                     <LinkBox Icon={SiAmazon} href="https://www.amazon.fr/dp/B0CVVZWGPR" />
                     <LinkBox Icon={SiLinktree} href="https://linktr.ee/gaianaparis?utm_source=qr_code" />
                 </div>
             </div>
-            <div className="flex flex-row justify-between items-center py-8 border-t border-gray">
+            <div className="flex flex-col-reverse gap-4 lg:gap-0 lg:flex-row justify-between items-center py-8 border-t border-gray">
                 <div className="text-gray text-sm">
                     Copyright © 2024. All rights reserved.
                 </div>
@@ -123,7 +123,7 @@ const LinkBox = ({ Icon, href }: { Icon: IconType; href: string }) => {
             onMouseLeave={(e) => {
                 handleMouseLeave(e);
             }}
-            className="relative grid h-12 w-full place-content-center sm:h-28 md:h-24 md:w-24"
+            className="relative grid h-12 w-full border border-gray lg:border-none place-content-center sm:h-28 md:h-24 md:w-24"
         >
             <Icon className="text-xl sm:text-3xl lg:text-4xl" />
 

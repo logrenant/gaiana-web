@@ -6,7 +6,7 @@ const TeamAccordion = () => {
     const [open, setOpen] = useState(items[0].id);
     return (
         <Section id="section5">
-            <section className="p-18 bg-primary">
+            <section className="p-4 lg:p-18 bg-primary">
                 <div className="flex flex-col h-fit w-full overflow-hidden">
                     {items.map((item) => {
                         return (
@@ -49,7 +49,7 @@ const Panel = ({
             className="border-b-[1.5px] first:border-t-[1.5px] border-gray py-8 w-full h-full group">
 
             <button className="flex justify-between w-full cursor-pointer">
-                <span className="text-3xl font-semibold">
+                <span className="text-xl lg:text-3xl font-semibold">
                     {title}
                 </span>
             </button>
@@ -68,7 +68,7 @@ const Panel = ({
                             initial="closed"
                             animate="open"
                             exit="closed"
-                            className="text-2xl font-normal text-secondary leading-7"
+                            className="lg:text-2xl font-normal text-secondary leading-7"
                         >
                             <p className="w-full">{description}</p>
                         </motion.div>
@@ -120,18 +120,18 @@ const items = [
         id: 3,
         title: "Regulation",
         description:
-            "Ensuring adherence to legal standards, ethical guidelines, and safety protocols. It involves navigating a comprehensive framework of regulations established by governing bodies to protect public health, encourage fair competition, and maintain the integrity of the skincare sector. Navigating this regulatory landscape demands constant vigilance, specialized knowledge, and adaptability to keep pace with evolving regulations while ensuring operational excellence. Central to regulatory compliance is a dedication to accountability, transparency, and responsibility, fostering trust among stakeholders and cultivating an environment conducive to sustainable growth and innovation within the skincare laboratory.",
+            "Skincare compliance entails navigating regulations to ensure public health, fair competition, and sector integrity. It requires vigilance, expertise, and adaptability to evolving rules while maintaining operational excellence. Key is accountability, transparency, and fostering stakeholder trust for sustainable growth and innovation.",
     },
     {
         id: 4,
         title: "Manufacturing",
         description:
-            "Manufacturing lies at the heart of our operations, where precision meets innovation to bring skincare products to life. Our state-of-the-art facilities combine cutting-edge technology with stringent quality control measures to ensure every product meets the highest standards of efficacy and safety. With a commitment to sustainability and ethical practices, we strive to minimize environmental impact while maximizing product performance, forging a path towards a brighter, healthier future for skincare manufacturing.",
+            "Manufacturing is central to our operations, blending precision and innovation to create skincare products. Our advanced facilities use state-of-the-art technology and strict quality control to ensure high standards of efficacy and safety. Committed to sustainability and ethics, we aim for minimal environmental impact and optimal product performance, shaping a brighter future for skincare manufacturing.",
     },
     {
         id: 5,
         title: "Packaging",
         description:
-            "Packaging is where creativity meets functionality, and at our facility, we excel in crafting packaging solutions that not only protect your products but also elevate your brand identity. Our team of skilled designers works closely with clients to understand their vision and requirements, ensuring that every packaging design reflects their unique brand story and resonates with their target audience. Whether it's sleek and minimalist or vibrant and eye-catching, we tailor our designs to meet your specific needs, offering a range of options to enhance shelf appeal and consumer experience. From concept to execution, we prioritize attention to detail and innovation to deliver packaging solutions that leave a lasting impression and set your products apart in the market.",
+            "In packaging, we merge creativity and functionality to protect products and boost brand identity. Our designers work closely with clients to craft designs that reflect their brand story and appeal to their audience. Whether sleek or vibrant, we tailor designs to enhance shelf appeal and consumer experience, prioritizing detail and innovation to set products apart",
     },
 ];

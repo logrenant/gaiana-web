@@ -68,7 +68,7 @@ const TextChange = ({
             onTouchMove={touchMoveHandler}
             ref={cardRef}
             className={cn(
-                "bg-primary w-[38rem] rounded-lg p-8 relative overflow-hidden",
+                "bg-primary lg:w-[38rem] rounded-lg flex flex-col lg:flex-none lg:justify-center lg:p-8 relative overflow-hidden",
                 className
             )}
         >
@@ -93,7 +93,7 @@ const TextChange = ({
                     className="absolute bg-primary z-20  will-change-transform"
                 >
                     <p
-                        className="text-base sm:text-[3rem] py-10 font-bold text-black text-transparent"
+                        className="text-xl text-nowrap sm:text-[3rem] w-full py-10 font-bold text-black text-transparent"
                     >
                         {revealText}
                     </p>
@@ -109,7 +109,7 @@ const TextChange = ({
                 ></motion.div>
 
                 <div className=" overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,white,transparent)]">
-                    <p className="text-base sm:text-[3rem] py-10 font-bold bg-clip-text text-gray bg-[#323238]">
+                    <p className="text-2xl sm:text-[3rem] py-10 font-bold bg-clip-text text-gray bg-[#323238]">
                         {text}
                     </p>
                     <MemoizedStars />
@@ -125,7 +125,7 @@ const Stars = () => {
     const random = () => Math.random();
     return (
         <div className="absolute inset-0">
-            {[...Array(140)].map((_, i) => (
+            {[...Array(60)].map((_, i) => (
                 <motion.span
                     key={`star-${i}`}
                     animate={{
@@ -145,7 +145,7 @@ const Stars = () => {
                         left: `${random() * 100}%`,
                         width: `3px`,
                         height: `3px`,
-                        backgroundColor: "black",
+                        backgroundColor: "green",
                         borderRadius: "50%",
                         zIndex: 1,
                     }}
