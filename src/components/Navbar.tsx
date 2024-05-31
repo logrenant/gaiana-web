@@ -62,7 +62,7 @@ const Navbar: React.FC = () => {
                 <div className='hidden lg:inline'>
                     <div className='flex flex-row items-center gap-12 text-2xl'>
                         <div className='flex gap-6'>
-                            <UnderlineLinkButton label='About us' href='/aboutus' />
+                            <UnderlineLinkButton label='À Propos de Nous' href='/aboutus' />
                             <UnderlineLinkButton label='Contact' href='/contact' />
                         </div>
                     </div>

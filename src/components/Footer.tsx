@@ -28,7 +28,7 @@ const Footer = () => {
                 </div>
                 <div className="flex gap-8 text-lg">
                     <Link href="/aboutus" className="text-gray hover:text-primary transition-colors duration-200">
-                        About us
+                        À Propos de Nous
                     </Link>
                     <Link href="/contact" className="text-gray hover:text-primary transition-colors duration-200">
                         Contact
