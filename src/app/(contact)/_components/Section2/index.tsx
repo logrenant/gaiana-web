@@ -17,7 +17,7 @@ const Section2: FC = () => {
             <div className='relative bg-primary flex flex-col px-4 lg:px-18 gap-8 border-t border-light z-10'>
                 <div className='flex flex-row justify-between items-center w-full my-18'>
                     <div className='text-4xl lg:text-9xl font-normal text-secondary tracking-tighter leading-[0.925]'>
-                        <h1>You Can Reach Us.</h1>
+                        <h1>Vous Pouvez Nous Contacter.</h1>
                     </div>
                     <div
                         style={{

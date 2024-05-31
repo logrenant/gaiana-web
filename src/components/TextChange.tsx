@@ -2,7 +2,6 @@
 
 import React, { useEffect, useRef, useState, memo } from "react";
 import { motion } from "framer-motion";
-import { twMerge } from "tailwind-merge";
 import { cn } from "@/utils/cn";
 
 const TextChange = ({
@@ -68,7 +67,7 @@ const TextChange = ({
             onTouchMove={touchMoveHandler}
             ref={cardRef}
             className={cn(
-                "bg-primary lg:w-[38rem] rounded-lg flex flex-col lg:flex-none lg:justify-center lg:p-8 relative overflow-hidden",
+                "bg-primary lg:w-[53rem] rounded-lg flex flex-col lg:flex-none lg:justify-center lg:p-8 relative overflow-hidden",
                 className
             )}
         >

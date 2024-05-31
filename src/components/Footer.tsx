@@ -13,9 +13,9 @@ const Footer = () => {
     return (
         <div className="bg-secondary text-primary px-4 py-8 lg:p-18">
             <div className="flex flex-col gap-8 lg:gap-0 lg:flex-row lg:justify-between py-8 items-center">
-                <div className="text-3xl lg:text-5xl font-medium">
+                <Link href="/" className="text-3xl lg:text-5xl font-medium">
                     Laboratoire Gaïana Paris
-                </div>
+                </Link>
                 <div className="flex w-full justify-between lg:justify-end">
                     <LinkBox Icon={SiInstagram} href="https://www.instagram.com/gaianaparis/" />
                     <LinkBox Icon={SiAmazon} href="https://www.amazon.fr/dp/B0CVVZWGPR" />

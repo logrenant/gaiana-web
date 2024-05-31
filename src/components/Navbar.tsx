@@ -65,9 +65,6 @@ const Navbar: React.FC = () => {
                             <UnderlineLinkButton label='About us' href='/aboutus' />
                             <UnderlineLinkButton label='Contact' href='/contact' />
                         </div>
-                        <div>
-                            <Sun />
-                        </div>
                     </div>
                 </div>
                 <div className='inline lg:hidden text-sm font-normal'

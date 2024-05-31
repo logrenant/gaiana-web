@@ -14,14 +14,19 @@ const playfair = Playfair_Display({
     display: 'swap'
 })
 
+interface RootLayoutProps {
+    children: React.ReactNode;
+    params: {
+        locale: string;
+    };
+}
 
 export default function RootLayout({
     children,
-}: Readonly<{
-    children: React.ReactNode;
-}>) {
+    params: { locale },
+}: Readonly<RootLayoutProps>) {
     return (
-        <html lang="en">
+        <html lang={locale}>
             <body className={`${playfair.variable} font-playfair`}>
                 <ScrollObserver>
                     {children}

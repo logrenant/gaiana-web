@@ -18,8 +18,8 @@ const Section1 = () => {
             >
                 <div className="w-full flex justify-center">
                     <TextChange
-                        text="You know the business"
-                        revealText="We know the chemistry "
+                        text="Vos aspirations prennent forme"
+                        revealText="Grâce à notre expertise en chimie."
                     />
                 </div>
                 <span className="absolute top-[75%] left-1/2 -translate-y-1/2 -translate-x-1/2 animate-bounce">

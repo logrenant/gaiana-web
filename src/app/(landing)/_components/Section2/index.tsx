@@ -1,6 +1,6 @@
 "use client"
 
-import React, { Dispatch, SetStateAction, useContext, useEffect } from 'react'
+import React, { Dispatch, SetStateAction, useContext } from 'react'
 import { FC, useState } from "react";
 import Section from '@/components/Section';
 import { ScrollContext } from "@/app/(aboutus)/useScroll";
@@ -55,7 +55,7 @@ const Section2: FC = () => {
 
     return (
         <Section id="section2">
-            <div className="relative overflow-hidden border-t border-gray lg:px-18 lg:pt-18 pt-8">
+            <div className="relative overflow-hidden bg-primary border-t border-gray lg:px-18 lg:pt-18 pt-8">
                 <motion.div
                     drag="x"
                     dragConstraints={{

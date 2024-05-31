@@ -1,6 +1,7 @@
 import { Dispatch, SetStateAction, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Section from "@/components/Section";
+import { useWindowSize } from "./useWindowSize";
 
 const TeamAccordion = () => {
     const [open, setOpen] = useState(items[0].id);
@@ -41,6 +42,7 @@ const Panel = ({
     title,
     description,
 }: PanelProps) => {
+    const { width } = useWindowSize();
     const isOpen = open === id;
 
     return (
@@ -57,7 +59,7 @@ const Panel = ({
                 {isOpen && (
                     <motion.div
                         key={`panel-${id}`}
-                        variants={panelVariants}
+                        variants={width && width > 1024 ? panelVariants : panelVariantsSm}
                         initial="closed"
                         animate="open"
                         exit="closed"
@@ -68,7 +70,7 @@ const Panel = ({
                             initial="closed"
                             animate="open"
                             exit="closed"
-                            className="lg:text-2xl font-normal text-secondary leading-7"
+                            className="lg:text-2xl text-sm font-normal text-secondary leading-7"
                         >
                             <p className="w-full">{description}</p>
                         </motion.div>
@@ -92,6 +94,17 @@ const panelVariants = {
     },
 };
 
+const panelVariantsSm = {
+    open: {
+        width: "100%",
+        height: "480px",
+    },
+    closed: {
+        width: "100%",
+        height: "0px",
+    },
+};
+
 const descriptionVariants = {
     open: {
         opacity: 1,
@@ -106,32 +119,32 @@ const descriptionVariants = {
 const items = [
     {
         id: 1,
-        title: "Brand Creation",
+        title: "Brief de Marketing",
         description:
-            "Brand creation is the cornerstone of a company's identity, blending market insight, consumer understanding, and strategic planning to craft authentic, memorable brands. From defining values to designing visuals, every step aims to create a unique brand that resonates and engages with consumers, driving lasting connections and market success.",
+            "Nous débutons chaque collaboration en vous écoutant attentivement afin de comprendre vos besoins spécifiques et ceux de vos clients. Cette étape fondamentale guide la création d'une stratégie solide pour le développement de votre produit cosmétique.",
     },
     {
         id: 2,
-        title: "Formulation",
+        title: "Gestion de Projet",
         description:
-            "Formulation serves as the bedrock of product development, blending scientific precision with creative ingenuity to craft solutions that meet diverse consumer needs. It entails meticulous research, innovative ideation, and rigorous testing to ensure each formulation embodies excellence, efficacy, and safety, thereby enhancing consumer trust and loyalty."
+            "Notre équipe expérimentée prend en charge la gestion complète de votre projet, de sa conception à sa réalisation. Nous nous engageons à respecter les délais et le budget convenus, tout en assurant une communication transparente à chaque étape."
     },
     {
         id: 3,
-        title: "Regulation",
+        title: "R&D Formulation",
         description:
-            "Skincare compliance entails navigating regulations to ensure public health, fair competition, and sector integrity. It requires vigilance, expertise, and adaptability to evolving rules while maintaining operational excellence. Key is accountability, transparency, and fostering stakeholder trust for sustainable growth and innovation.",
+            " Notre laboratoire de recherche et développement crée des formulations innovantes et performantes, en s'appuyant sur les dernières avancées scientifiques et technologiques. Nous concevons des produits sur mesure en phase avec vos exigences et les tendances du marché.",
     },
     {
         id: 4,
-        title: "Manufacturing",
+        title: "Étude Réglementaire",
         description:
-            "Manufacturing is central to our operations, blending precision and innovation to create skincare products. Our advanced facilities use state-of-the-art technology and strict quality control to ensure high standards of efficacy and safety. Committed to sustainability and ethics, we aim for minimal environmental impact and optimal product performance, shaping a brighter future for skincare manufacturing.",
+            "Pour chaque formulation, nous effectuons une analyse réglementaire exhaustive, couvrant la compatibilité des ingrédients, la concentration des principes actifs et la présence éventuelle d'allergènes. Cette analyse inclut également l'évaluation des matières premières fournies par nos partenaires. Ensuite, nous compilons toutes les informations réglementaires nécessaires dans un Dossier d’Information Produit (DIP), un document exhaustif et obligatoire. Parallèlement, nous concevons des étiquettes conformes à la réglementation, fournissant aux consommateurs toutes les informations pertinentes sur le produit. Enfin, nous assurons la conformité réglementaire et la sécurité des produits en effectuant une notification sur le portail CPNP (Cosmetic Products Notification Portal) avant leur mise sur le marché.",
     },
     {
         id: 5,
-        title: "Packaging",
+        title: "Fabrication et Conditionnement",
         description:
-            "In packaging, we merge creativity and functionality to protect products and boost brand identity. Our designers work closely with clients to craft designs that reflect their brand story and appeal to their audience. Whether sleek or vibrant, we tailor designs to enhance shelf appeal and consumer experience, prioritizing detail and innovation to set products apart",
+            "Nous veillons à ce que le processus de fabrication soit conforme aux normes de qualité les plus élevées, garantissant ainsi la cohérence et la fiabilité de chaque lot de production. De plus, nous nous engageons à respecter les délais convenus pour la livraison, assurant ainsi que vos produits sont disponibles lorsque vous en avez besoin. En fin de compte, notre objectif est de vous fournir des produits finis qui répondent à vos attentes et qui se distinguent sur le marché.",
     },
 ];
