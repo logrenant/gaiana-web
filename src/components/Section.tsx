@@ -1,6 +1,6 @@
 "use client";
 
-import { useLayoutEffect, useRef, useState, useContext } from "react";
+import { useLayoutEffect, useRef, useState, useContext, useCallback } from "react";
 import { ScrollContext } from "../app/(aboutus)/useScroll";
 
 type SectionProps = {
@@ -47,20 +47,21 @@ export default function Section({ children, id, setOffsetTop }: SectionProps) {
         }
     }
 
+    const updateDimensions = useCallback(() => {
+        if (ref.current) {
+            setTop(ref.current.offsetTop);
+            setHeight(ref.current.clientHeight);
+            if (setOffsetTop) setOffsetTop(ref.current.offsetTop);
+        }
+    }, [setOffsetTop]);
+
     useLayoutEffect(() => {
-        const fnc = () => {
-            if (ref.current) {
-                setTop(ref.current.offsetTop);
-                setHeight(ref.current.clientHeight);
-                if (setOffsetTop) setOffsetTop(ref.current.offsetTop);
-            }
-        };
-        fnc();
-        window.addEventListener("resize", fnc);
+        updateDimensions();
+        window.addEventListener("resize", updateDimensions);
         return () => {
-            window.removeEventListener("resize", fnc);
+            window.removeEventListener("resize", updateDimensions);
         };
-    }, []);
+    }, [updateDimensions]);
 
     return (
         <section
